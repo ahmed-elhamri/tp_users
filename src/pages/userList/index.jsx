@@ -1,6 +1,6 @@
-import UserRow from "./UserRow";
+import UserRow from "../userRow";
 
-export default function UserTable({ users, onDelete, onDetails }) {
+export default function UserList({ users, onDelete, onDetails }) {
     return (
         <table>
             <thead>

@@ -1,11 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
-import Header from "./components/Header";
-import UserTable from "./components/UserTable";
-import UserModal from "./components/UserModal";
+import Header from "./pages/header";
+import UserList from "./pages/userList";
+import UserModal from "./pages/userModal";
 import {useState} from "react";
-import {INITIAL_USERS} from "./data/users";
-import Input from "./components/Input";
+import {INITIAL_USERS} from "./pages/userList/users";
+import Input from "./components/input";
+import Button from "./components/button";
 
 export default function App() {
     const [users, setUsers]       = useState(INITIAL_USERS);
@@ -39,7 +40,7 @@ export default function App() {
                         size="md"
                     />
                 </div>
-                <UserTable users={filteredUsers} onDelete={handleDeleteUser} onDetails={handleUserDetails} />
+                <UserList users={filteredUsers} onDelete={handleDeleteUser} onDetails={handleUserDetails} />
             </main>
             <UserModal user={selectedUser} onClose={handleCloseDetails} />
         </>

@@ -1,5 +1,4 @@
-import Button from "./Button";
-import { useEffect, useState } from "react";
+import Button from "../../components/button";
 
 export default function UserModal({ user, onClose }) {
     if (!user) return null;
