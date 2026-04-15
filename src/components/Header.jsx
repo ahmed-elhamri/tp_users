@@ -1,12 +1,13 @@
-function Header() {
+import Button from "./Button";
+
+export default function Header() {
     return (
         <header className="header">
-            <span className="header-title">Users</span>
+            <span>Users</span>
             <div className="header-actions">
-                <button className="header-btn">Home</button>
-                <button className="header-btn">Logout</button>
+                <Button variant="ghost" size="sm">Home</Button>
+                <Button variant="ghost" size="sm">Logout</Button>
             </div>
         </header>
     );
 }
- export default Header;

@@ -1,3 +1,6 @@
+import Button from "./Button";
+
+export default
 function UserRow({ user, onDelete, onDetails }) {
     return (
         <tr>
@@ -6,10 +9,11 @@ function UserRow({ user, onDelete, onDetails }) {
             <td>{user.email}</td>
             <td>{user.phone}</td>
             <td>
-                <button className="btn-details" onClick={() => onDetails(user)}>Details</button>
-                <button className="btn-delete"  onClick={() => onDelete(user.id)}>Delete</button>
+                <div className="row-actions">
+                    <Button variant="primary" size="sm" onClick={() => onDetails(user)}>Details</Button>
+                    <Button variant="danger"  size="sm" onClick={() => onDelete(user.id)}>Delete</Button>
+                </div>
             </td>
         </tr>
     );
 }
-export default UserRow;
